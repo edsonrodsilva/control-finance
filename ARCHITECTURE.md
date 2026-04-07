@@ -8,7 +8,7 @@ O projeto segue **Clean Architecture** combinada com **Domain-Driven Design (DDD
 
 ### Dependências Entre Camadas
 
-```
+```text
 HTTP Request
     ↓
 [api/rest] Controllers
@@ -28,7 +28,7 @@ Database / External Services
 
 Ao criar uma nova feature ou bounded context:
 
-```
+```plaintext
 src/main/java/com/controlfinance/modules/{contexto}/
 ├── application/
 │   ├── dto/
@@ -88,12 +88,14 @@ src/main/java/com/controlfinance/modules/{contexto}/
 **O quê faz:** Recebe HTTP requests e retorna HTTP responses
 
 **Responsabilidades:**
+
 - Validação de entrada (@Valid)
 - Autenticação e autorização
 - Serialização/desserialização de JSON
 - Status HTTP corretos
 
 **O que NÃO faz:**
+
 - Lógica de negócio
 - Acesso direto a banco de dados
 - Orquestração de use cases complexos
@@ -115,6 +117,7 @@ public class TransactionController {
 **O quê faz:** Orquestra a lógica de aplicação (use cases)
 
 **Responsabilidades:**
+
 - Implementar casos de uso
 - Chamar services de domínio
 - Mapear DTOs ↔ Entidades (MapStruct)
@@ -146,6 +149,7 @@ public class CreateTransactionUseCase {
 **O quê faz:** Encapsula as regras de negócio
 
 **Responsabilidades:**
+
 - Definir entidades
 - Validações de negócio
 - Contratos (Repository Ports)
@@ -153,6 +157,7 @@ public class CreateTransactionUseCase {
 - Value Objects
 
 **O que NÃO faz:**
+
 - Persistência (MongoDB)
 - HTTP
 - Spring annotations (exceto @Document, @Id, @Field)
@@ -187,11 +192,13 @@ public interface TransactionRepositoryPort {
 ### 4. Infrastructure (infrastructure/)
 
 #### Em cada contexto (*/infrastructure/persistence/)
+
 - Implementações de Repository Ports
 - Queries MongoDB customizadas
 - Mapeamento ORM (se necessário)
 
 #### Compartilhado (/infrastructure/)
+
 - **security/** - JWT, SecurityConfig, JwtService, CryptoService
 - **events/** - Event listeners (auditoria, notificações)
 - **mongo/** - Configuração MongoDB
@@ -218,6 +225,7 @@ public class TransactionRepositoryAdapter implements TransactionRepositoryPort {
 ### 5. Common (common/)
 
 **Responsabilidades:**
+
 - `base/` - BaseDocument (multi-tenant)
 - `exceptions/` - Exceções globais, GlobalExceptionHandler
 - `utils/` - Funções compartilhadas, constantes
@@ -312,6 +320,7 @@ if (user == null) {
 ```
 
 Cenários tratados pelo `GlobalExceptionHandler`:
+
 - `BadRequestException` → 400
 - `NotFoundException` → 404
 - `UnauthorizedException` → 401
@@ -322,7 +331,7 @@ Cenários tratados pelo `GlobalExceptionHandler`:
 
 Organize mirrors de `src/main`:
 
-```
+```plaintext
 src/test/java/com/controlfinance/{contexto}/
 ├── application/usecases/
 │   └── Create{Entity}UseCaseTest.java (Unit Test)
@@ -333,6 +342,7 @@ src/test/java/com/controlfinance/{contexto}/
 ```
 
 Sufixos:
+
 - `Test` = Unit Test (mock)
 - `IT` = Integration Test (real DB container)
 

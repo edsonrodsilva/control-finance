@@ -158,9 +158,9 @@ O `docker-compose.yml` sobe um MongoDB 7 com o banco `control_finance` exposto n
 
 ### 3. Acessar a documentação
 
-- Swagger UI: http://localhost:8080/swagger-ui.html
-- OpenAPI JSON: http://localhost:8080/v3/api-docs
-- Health: http://localhost:8080/actuator/health
+- Swagger UI: <http://localhost:8080/swagger-ui.html>
+- OpenAPI JSON: <http://localhost:8080/v3/api-docs>
+- Health: <http://localhost:8080/actuator/health>
 
 ## Build e empacotamento
 
@@ -389,6 +389,11 @@ Filtros suportados em `GET /api/v1/transactions`:
 
 ### Dashboard
 
+```json
+{
+  "balance": 1500.00,
+  "totalIncome": 5000.00,
+  "totalExpense": 3500.00
 }
 ```
 
@@ -409,6 +414,7 @@ Siga este modelo para adicionar testes de integração em novos módulos:
 Para guias detalhados sobre como manter a organização do projeto, estrutura de pacotes, nomenclatura e padrões, consulte [ARCHITECTURE.md](ARCHITECTURE.md).
 
 Este documento cobre:
+
 - Fluxo de dependências entre camadas
 - Estrutura de um novo contexto de negócio
 - Responsabilidades de cada camada
@@ -419,6 +425,7 @@ Este documento cobre:
 Este repositório oferece uma fundação funcional para um backend financeiro modular, bem estruturado segundo Clean Architecture e DDD.
 
 **Componentes implementados:**
+
 - ✅ Autenticação JWT + 2FA (TOTP)
 - ✅ Gestão de Usuários
 - ✅ Categorias de Transações (com subcategorias)
@@ -431,6 +438,7 @@ Este repositório oferece uma fundação funcional para um backend financeiro mo
 - ✅ Testes de integração
 
 **Componentes planejados (structure-only):**
+
 - 🔜 Ativos (Assets)
 - 🔜 Fluxo de Caixa (Cashflow)
 - 🔜 Dívidas (Debts)
