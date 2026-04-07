@@ -59,9 +59,9 @@ src/main/java/com/controlfinance/modules/{contexto}/
         └── {Entity}RepositoryAdapter.java ← Implementação do Port
 ```
 
-    Observação: neste projeto, o diretório `modules/` representa os bounded contexts de domínio
-    (auth, user, transactions etc.). O nome pode ser renomeado para `domain/` no futuro, mas
-    mantivemos `modules/` para preservar histórico e estabilidade do pacote.
+> **Observação:** neste projeto, o diretório `modules/` representa os bounded contexts de domínio
+> (auth, user, transactions etc.). O nome pode ser renomeado para `domain/` no futuro, mas
+> mantivemos `modules/` para preservar histórico e estabilidade do pacote.
 
 ## Nomenclatura
 
@@ -101,6 +101,7 @@ src/main/java/com/controlfinance/modules/{contexto}/
 - Orquestração de use cases complexos
 
 **Exemplo:**
+
 ```java
 @RestController
 @RequestMapping("/api/v1/transactions")
@@ -124,6 +125,7 @@ public class TransactionController {
 - Transações (@Transactional)
 
 **Padrão UseCase:**
+
 ```java
 @Service
 @RequiredArgsConstructor
@@ -163,6 +165,7 @@ public class CreateTransactionUseCase {
 - Spring annotations (exceto @Document, @Id, @Field)
 
 **Exemplo de Entidade:**
+
 ```java
 @Document(collection = "transactions")
 public class Transaction extends BaseDocument {
@@ -180,6 +183,7 @@ public class Transaction extends BaseDocument {
 ```
 
 **Repository Port (Interface):**
+
 ```java
 public interface TransactionRepositoryPort {
   Transaction save(Transaction tx);
@@ -206,6 +210,7 @@ public interface TransactionRepositoryPort {
 - **config/** - Beans gerais
 
 **Exemplo de Repository Adapter:**
+
 ```java
 @Repository
 @RequiredArgsConstructor
@@ -247,6 +252,7 @@ public class Transaction extends BaseDocument {
 ```
 
 No repository:
+
 ```java
 List<Transaction> findByUserIdAndType(String userId, TransactionType type);
 ```
@@ -285,6 +291,7 @@ public class TransactionCreatedEvent extends ApplicationEvent {
 ```
 
 Publique em UseCases:
+
 ```java
 applicationEventPublisher.publishEvent(
   new TransactionCreatedEvent(this, saved.getId(), saved.getUserId())
@@ -292,6 +299,7 @@ applicationEventPublisher.publishEvent(
 ```
 
 Ouça com listeners:
+
 ```java
 @Component
 @RequiredArgsConstructor
@@ -363,6 +371,7 @@ Sufixos:
 ## Boas Práticas Gerais
 
 ✅ **FAÇA:**
+
 - Injetar via construtor
 - Usar `@RequiredArgsConstructor` com Lombok
 - Nomes de classes descritivos e únicos
@@ -371,6 +380,7 @@ Sufixos:
 - Manter `.git/` limpo
 
 ❌ **NÃO FAÇA:**
+
 - Usar `new` em camadas de aplicação (injete)
 - Controllers chamando repositories diretamente
 - Lógica de negócio em controllers

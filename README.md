@@ -2,7 +2,7 @@
 
 Backend do sistema CONTROL FINANCE, desenvolvido com Spring Boot 3, Java 21 e MongoDB.
 
-O projeto segue uma organização por módulos de negócio, com separação entre camadas de aplicação, domínio, infraestrutura e interfaces. A proposta é servir como uma base evolutiva para um sistema financeiro com autenticação, gestão de usuários, categorias, transações, relatórios e recursos transversais como auditoria e notificações.
+O projeto segue uma organização por módulos de negócio, com separação entre camadas de aplicação, domínio, infraestrutura e api. A proposta é servir como uma base evolutiva para um sistema financeiro com autenticação, gestão de usuários, categorias, transações, relatórios e recursos transversais como auditoria e notificações.
 
 ## Visão geral
 
@@ -418,7 +418,7 @@ Este documento cobre:
 - Fluxo de dependências entre camadas
 - Estrutura de um novo contexto de negócio
 - Responsabilidades de cada camada
-- Verificação automática da quali dade de arquitetura
+- Verificação automática da qualidade de arquitetura
 
 ## Estado Atual
 
