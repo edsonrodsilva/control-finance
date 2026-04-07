@@ -41,9 +41,9 @@ O projeto está organizado como um monólito modular, com inspiração em Clean 
 Estrutura principal:
 
 - `src/main/java/com/controlfinance/modules`: módulos de negócio
-- `src/main/java/com/controlfinance/interfaces/rest`: controllers HTTP
+- `src/main/java/com/controlfinance/api/rest`: controllers HTTP
 - `src/main/java/com/controlfinance/infrastructure`: segurança, eventos, MongoDB e OpenAPI
-- `src/main/java/com/controlfinance/shared`: base comum, exceções e utilitários
+- `src/main/java/com/controlfinance/common`: base comum, exceções e utilitários
 
 Fluxo típico de uma requisição:
 
@@ -64,7 +64,7 @@ src/
         mongo/
         openapi/
         security/
-      interfaces/
+      api/
         rest/
       modules/
         assets/
@@ -80,7 +80,7 @@ src/
         reporting/
         transactions/
         user/
-      shared/
+      common/
         base/
         exceptions/
         utils/

@@ -1,6 +1,6 @@
 package com.controlfinance.modules.auth.application.usecases;
 
-import com.controlfinance.infrastructure.events.DomainEventPublisher;
+import com.controlfinance.common.events.DomainEventPublisher;
 import com.controlfinance.infrastructure.security.AppRoles;
 import com.controlfinance.modules.auth.application.dto.AuthTokensDto;
 import com.controlfinance.modules.auth.application.dto.RegisterRequest;

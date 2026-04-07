@@ -1,8 +1,8 @@
 package com.controlfinance.modules.audit.application.handlers;
 
-import com.controlfinance.infrastructure.events.DomainEvent;
+import com.controlfinance.common.events.DomainEvent;
 import com.controlfinance.modules.audit.domain.entities.AuditLog;
-import com.controlfinance.modules.audit.infrastructure.persistence.AuditLogMongoRepository;
+import com.controlfinance.modules.audit.domain.repositories.AuditLogRepositoryPort;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class AuditEventHandler {
 
-  private final AuditLogMongoRepository repo;
+  private final AuditLogRepositoryPort repo;
   private final ObjectMapper mapper;
 
   @EventListener

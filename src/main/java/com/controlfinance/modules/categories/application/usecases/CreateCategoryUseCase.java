@@ -1,6 +1,6 @@
 package com.controlfinance.modules.categories.application.usecases;
 
-import com.controlfinance.infrastructure.security.SecurityUtils;
+import com.controlfinance.common.security.SecurityUtils;
 import com.controlfinance.modules.categories.application.dto.CategoryDto;
 import com.controlfinance.modules.categories.application.mapper.CategoryMapper;
 import com.controlfinance.modules.categories.domain.entities.Category;

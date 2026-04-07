@@ -1,6 +1,6 @@
 package com.controlfinance.modules.budget.application.services;
 
-import com.controlfinance.infrastructure.events.DomainEventPublisher;
+import com.controlfinance.common.events.DomainEventPublisher;
 import com.controlfinance.modules.budget.domain.events.BudgetLimitReachedEvent;
 import com.controlfinance.modules.budget.domain.repositories.BudgetRepositoryPort;
 import com.controlfinance.modules.transactions.domain.entities.Transaction;

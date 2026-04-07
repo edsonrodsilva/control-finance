@@ -1,4 +1,4 @@
-package com.controlfinance.infrastructure.events;
+package com.controlfinance.common.events;
 
 import java.time.Instant;
 

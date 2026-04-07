@@ -29,7 +29,7 @@ Database / External Services
 Ao criar uma nova feature ou bounded context:
 
 ```
-src/main/java/com/controlfinance/{contexto}/
+src/main/java/com/controlfinance/modules/{contexto}/
 ├── application/
 │   ├── dto/
 │   │   ├── {Entity}Dto.java           ← DTO de saída
@@ -58,6 +58,10 @@ src/main/java/com/controlfinance/{contexto}/
         ├── {Entity}MongoRepository.java  ← Spring Data interface
         └── {Entity}RepositoryAdapter.java ← Implementação do Port
 ```
+
+    Observação: neste projeto, o diretório `modules/` representa os bounded contexts de domínio
+    (auth, user, transactions etc.). O nome pode ser renomeado para `domain/` no futuro, mas
+    mantivemos `modules/` para preservar histórico e estabilidade do pacote.
 
 ## Nomenclatura
 
@@ -188,7 +192,7 @@ public interface TransactionRepositoryPort {
 - Mapeamento ORM (se necessário)
 
 #### Compartilhado (/infrastructure/)
-- **security/** - JWT, SecurityConfig, SecurityUtils
+- **security/** - JWT, SecurityConfig, JwtService, CryptoService
 - **events/** - Event listeners (auditoria, notificações)
 - **mongo/** - Configuração MongoDB
 - **openapi/** - Swagger UI

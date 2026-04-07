@@ -1,6 +1,6 @@
 package com.controlfinance.modules.auth.domain.events;
 
-import com.controlfinance.infrastructure.events.DomainEvent;
+import com.controlfinance.common.events.DomainEvent;
 
 import java.time.Instant;
 

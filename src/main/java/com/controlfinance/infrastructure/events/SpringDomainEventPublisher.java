@@ -1,5 +1,7 @@
 package com.controlfinance.infrastructure.events;
 
+import com.controlfinance.common.events.DomainEvent;
+import com.controlfinance.common.events.DomainEventPublisher;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;

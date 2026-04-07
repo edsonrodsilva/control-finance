@@ -1,6 +1,6 @@
 package com.controlfinance.modules.reporting.application.usecases;
 
-import com.controlfinance.infrastructure.security.SecurityUtils;
+import com.controlfinance.common.security.SecurityUtils;
 import com.controlfinance.modules.reporting.application.dto.DashboardSummaryDto;
 import com.controlfinance.modules.transactions.domain.enums.TransactionType;
 import lombok.RequiredArgsConstructor;

@@ -2,7 +2,7 @@ package com.controlfinance.modules.notifications.application.handlers;
 
 import com.controlfinance.modules.budget.domain.events.BudgetLimitReachedEvent;
 import com.controlfinance.modules.notifications.domain.entities.Notification;
-import com.controlfinance.modules.notifications.infrastructure.persistence.NotificationMongoRepository;
+import com.controlfinance.modules.notifications.domain.repositories.NotificationRepositoryPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class BudgetNotificationHandler {
 
-  private final NotificationMongoRepository repo;
+  private final NotificationRepositoryPort repo;
 
   @EventListener
   public void on(BudgetLimitReachedEvent event) {

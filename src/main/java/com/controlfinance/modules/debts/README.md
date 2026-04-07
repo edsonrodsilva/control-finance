@@ -9,4 +9,4 @@ Sugestão: seguir o mesmo padrão das pastas `categories` e `transactions`:
 - domain/repositories (ports)
 - application/usecases
 - infrastructure/persistence (adapters)
-- interfaces/rest (controllers)
+- api/rest (controllers)

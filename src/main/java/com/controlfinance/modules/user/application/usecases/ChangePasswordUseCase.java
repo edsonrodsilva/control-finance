@@ -1,6 +1,6 @@
 package com.controlfinance.modules.user.application.usecases;
 
-import com.controlfinance.infrastructure.security.SecurityUtils;
+import com.controlfinance.common.security.SecurityUtils;
 import com.controlfinance.modules.user.domain.repositories.UserRepositoryPort;
 import com.controlfinance.common.exceptions.BadRequestException;
 import com.controlfinance.common.exceptions.NotFoundException;

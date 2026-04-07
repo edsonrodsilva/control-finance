@@ -1,7 +1,7 @@
 package com.controlfinance.modules.user.application.usecases;
 
 import com.controlfinance.infrastructure.security.CryptoService;
-import com.controlfinance.infrastructure.security.SecurityUtils;
+import com.controlfinance.common.security.SecurityUtils;
 import com.controlfinance.modules.user.domain.repositories.UserRepositoryPort;
 import com.controlfinance.modules.user.domain.services.TotpService;
 import com.controlfinance.common.exceptions.NotFoundException;
