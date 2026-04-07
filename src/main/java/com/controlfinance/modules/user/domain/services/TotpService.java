@@ -1,6 +1,6 @@
 package com.controlfinance.modules.user.domain.services;
 
-import com.controlfinance.shared.exceptions.BadRequestException;
+import com.controlfinance.common.exceptions.BadRequestException;
 import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;

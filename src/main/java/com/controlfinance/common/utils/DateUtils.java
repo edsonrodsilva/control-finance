@@ -1,4 +1,4 @@
-package com.controlfinance.shared.utils;
+package com.controlfinance.common.utils;
 
 import java.time.*;
 

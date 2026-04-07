@@ -1,4 +1,4 @@
-package com.controlfinance.interfaces.rest;
+package com.controlfinance.api.rest;
 
 import com.controlfinance.modules.categories.application.dto.CategoryDto;
 import com.controlfinance.modules.categories.application.usecases.*;

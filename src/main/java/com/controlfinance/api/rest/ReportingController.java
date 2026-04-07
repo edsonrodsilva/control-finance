@@ -1,4 +1,4 @@
-package com.controlfinance.interfaces.rest;
+package com.controlfinance.api.rest;
 
 import com.controlfinance.modules.reporting.application.dto.DashboardSummaryDto;
 import com.controlfinance.modules.reporting.application.usecases.GetDashboardSummaryUseCase;

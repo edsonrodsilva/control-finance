@@ -1,6 +1,6 @@
 package com.controlfinance.infrastructure.security;
 
-import com.controlfinance.shared.exceptions.BadRequestException;
+import com.controlfinance.common.exceptions.BadRequestException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

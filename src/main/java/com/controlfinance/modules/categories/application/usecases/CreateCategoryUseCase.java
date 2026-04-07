@@ -5,7 +5,7 @@ import com.controlfinance.modules.categories.application.dto.CategoryDto;
 import com.controlfinance.modules.categories.application.mapper.CategoryMapper;
 import com.controlfinance.modules.categories.domain.entities.Category;
 import com.controlfinance.modules.categories.domain.repositories.CategoryRepositoryPort;
-import com.controlfinance.shared.exceptions.BadRequestException;
+import com.controlfinance.common.exceptions.BadRequestException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

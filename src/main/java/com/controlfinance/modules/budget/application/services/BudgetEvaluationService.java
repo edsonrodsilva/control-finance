@@ -4,7 +4,7 @@ import com.controlfinance.infrastructure.events.DomainEventPublisher;
 import com.controlfinance.modules.budget.domain.events.BudgetLimitReachedEvent;
 import com.controlfinance.modules.budget.domain.repositories.BudgetRepositoryPort;
 import com.controlfinance.modules.transactions.domain.entities.Transaction;
-import com.controlfinance.shared.utils.DateUtils;
+import com.controlfinance.common.utils.DateUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

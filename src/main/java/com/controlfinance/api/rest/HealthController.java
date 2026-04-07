@@ -1,4 +1,4 @@
-package com.controlfinance.interfaces.rest;
+package com.controlfinance.api.rest;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

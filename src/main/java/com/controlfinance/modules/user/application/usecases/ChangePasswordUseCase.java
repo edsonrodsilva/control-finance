@@ -2,8 +2,8 @@ package com.controlfinance.modules.user.application.usecases;
 
 import com.controlfinance.infrastructure.security.SecurityUtils;
 import com.controlfinance.modules.user.domain.repositories.UserRepositoryPort;
-import com.controlfinance.shared.exceptions.BadRequestException;
-import com.controlfinance.shared.exceptions.NotFoundException;
+import com.controlfinance.common.exceptions.BadRequestException;
+import com.controlfinance.common.exceptions.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

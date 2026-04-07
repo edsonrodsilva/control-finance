@@ -4,7 +4,7 @@ import com.controlfinance.infrastructure.security.SecurityUtils;
 import com.controlfinance.modules.transactions.application.dto.TransactionDto;
 import com.controlfinance.modules.transactions.application.mapper.TransactionMapper;
 import com.controlfinance.modules.transactions.domain.repositories.TransactionRepositoryPort;
-import com.controlfinance.shared.exceptions.NotFoundException;
+import com.controlfinance.common.exceptions.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

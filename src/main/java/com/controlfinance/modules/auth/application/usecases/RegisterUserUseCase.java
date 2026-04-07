@@ -7,7 +7,7 @@ import com.controlfinance.modules.auth.application.dto.RegisterRequest;
 import com.controlfinance.modules.auth.domain.events.UserRegisteredEvent;
 import com.controlfinance.modules.user.domain.entities.User;
 import com.controlfinance.modules.user.domain.repositories.UserRepositoryPort;
-import com.controlfinance.shared.exceptions.BadRequestException;
+import com.controlfinance.common.exceptions.BadRequestException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

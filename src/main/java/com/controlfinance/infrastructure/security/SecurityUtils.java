@@ -1,6 +1,6 @@
 package com.controlfinance.infrastructure.security;
 
-import com.controlfinance.shared.exceptions.UnauthorizedException;
+import com.controlfinance.common.exceptions.UnauthorizedException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 

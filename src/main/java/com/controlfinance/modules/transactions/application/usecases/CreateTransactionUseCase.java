@@ -10,7 +10,7 @@ import com.controlfinance.modules.transactions.domain.enums.TransactionStatus;
 import com.controlfinance.modules.transactions.domain.enums.TransactionType;
 import com.controlfinance.modules.transactions.domain.events.TransactionCreatedEvent;
 import com.controlfinance.modules.transactions.domain.repositories.TransactionRepositoryPort;
-import com.controlfinance.shared.exceptions.BadRequestException;
+import com.controlfinance.common.exceptions.BadRequestException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

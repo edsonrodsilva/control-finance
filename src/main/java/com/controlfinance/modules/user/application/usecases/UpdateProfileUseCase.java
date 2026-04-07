@@ -4,8 +4,8 @@ import com.controlfinance.infrastructure.security.SecurityUtils;
 import com.controlfinance.modules.user.application.dto.UserDto;
 import com.controlfinance.modules.user.application.mapper.UserMapper;
 import com.controlfinance.modules.user.domain.repositories.UserRepositoryPort;
-import com.controlfinance.shared.exceptions.BadRequestException;
-import com.controlfinance.shared.exceptions.NotFoundException;
+import com.controlfinance.common.exceptions.BadRequestException;
+import com.controlfinance.common.exceptions.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

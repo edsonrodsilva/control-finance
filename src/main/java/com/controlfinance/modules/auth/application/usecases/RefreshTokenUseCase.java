@@ -4,7 +4,7 @@ import com.controlfinance.infrastructure.security.JwtService;
 import com.controlfinance.modules.auth.application.dto.AuthTokensDto;
 import com.controlfinance.modules.auth.application.dto.RefreshRequest;
 import com.controlfinance.modules.user.domain.repositories.UserRepositoryPort;
-import com.controlfinance.shared.exceptions.UnauthorizedException;
+import com.controlfinance.common.exceptions.UnauthorizedException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

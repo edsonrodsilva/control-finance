@@ -4,7 +4,7 @@ import com.controlfinance.infrastructure.security.CryptoService;
 import com.controlfinance.infrastructure.security.SecurityUtils;
 import com.controlfinance.modules.user.domain.repositories.UserRepositoryPort;
 import com.controlfinance.modules.user.domain.services.TotpService;
-import com.controlfinance.shared.exceptions.NotFoundException;
+import com.controlfinance.common.exceptions.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -37,7 +37,7 @@ public class Enable2FAUseCase {
       user.setTwoFactorEnabled(true);
       users.save(user);
     } else {
-      throw new com.controlfinance.shared.exceptions.BadRequestException("Invalid 2FA code");
+      throw new com.controlfinance.common.exceptions.BadRequestException("Invalid 2FA code");
     }
   }
 }

@@ -1,4 +1,4 @@
-package com.controlfinance.shared.exceptions;
+package com.controlfinance.common.exceptions;
 
 import org.springframework.http.HttpStatus;
 

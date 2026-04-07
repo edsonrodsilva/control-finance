@@ -1,6 +1,6 @@
 package com.controlfinance.modules.notifications.domain.entities;
 
-import com.controlfinance.shared.base.BaseDocument;
+import com.controlfinance.common.base.BaseDocument;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 

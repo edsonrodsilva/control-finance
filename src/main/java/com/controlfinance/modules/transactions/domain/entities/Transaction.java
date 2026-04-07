@@ -2,7 +2,7 @@ package com.controlfinance.modules.transactions.domain.entities;
 
 import com.controlfinance.modules.transactions.domain.enums.TransactionStatus;
 import com.controlfinance.modules.transactions.domain.enums.TransactionType;
-import com.controlfinance.shared.base.BaseDocument;
+import com.controlfinance.common.base.BaseDocument;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 

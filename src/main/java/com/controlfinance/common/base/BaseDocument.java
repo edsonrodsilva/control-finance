@@ -1,4 +1,4 @@
-package com.controlfinance.shared.base;
+package com.controlfinance.common.base;
 
 import lombok.*;
 import org.springframework.data.annotation.*;
